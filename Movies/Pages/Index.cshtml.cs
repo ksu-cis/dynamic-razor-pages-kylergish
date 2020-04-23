@@ -17,8 +17,9 @@ namespace Movies.Pages
             this.IMDBMax = IMDBMax;
             Movies = MovieDatabase.Search(SearchTerms);
             Movies = MovieDatabase.FilterByMPAARating(Movies, MPAARatings);
-            //Movies = MovieDatabase.FilterByGenre(Movies, Genres);
+            Movies = MovieDatabase.FilterByGenre(Movies, Genres);
             Movies = MovieDatabase.FilterByIMDBRating(Movies, IMDBMin, IMDBMax);
+            Movies = MovieDatabase.FilterByRottenTomatoRating(Movies, IMDBMin, IMDBMax);
         }
 
         /// <summary>
